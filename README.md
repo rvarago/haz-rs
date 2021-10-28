@@ -1,2 +1,5 @@
 # haz-rs
-A narrow abstraction over polymorphic environments
+
+A thin abstraction over polymorphic environments.
+
+
