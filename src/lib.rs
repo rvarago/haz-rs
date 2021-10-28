@@ -1,6 +1,6 @@
 //! A thin abstraction over polymorphic environments.
 //!
-//! We might want to a polymorphic when::
+//! We might want to a polymorphic when:
 //!
 //! - we want access to a set of types smaller than what a concrete environment may expose, or
 //! - we do not care about any concrete environment as long as it exposes all required types
