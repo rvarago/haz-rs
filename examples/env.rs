@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use haz::{access_from, Has};
 
 fn main() {
@@ -24,20 +26,20 @@ where
 }
 
 #[derive(Debug)]
-pub struct Env {
+struct Env {
     host: Host,
     port: Port,
     verbosity: Verbosity,
 }
 
 #[derive(Debug)]
-pub struct Host(String);
+struct Host(String);
 
 #[derive(Debug)]
-pub struct Port(u16);
+struct Port(u16);
 
 #[derive(Debug)]
-pub enum Verbosity {
+enum Verbosity {
     Low,
     High,
 }
