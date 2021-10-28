@@ -1,6 +1,6 @@
 [package]
 name = "haz"
-description = "A narrow abstraction over polymorphic environments"
+description = "A thin abstraction over polymorphic environments"
 version = "0.1.0"
 edition = "2018"
 
