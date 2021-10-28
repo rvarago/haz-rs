@@ -37,6 +37,12 @@ jobs:
           args: --all-targets
 
       - uses: actions-rs/cargo@v1
+      - name: Building
+        with:
+          command: build
+          args: --all-targets
+
+      - uses: actions-rs/cargo@v1
       - name: Testing
         with:
           command: test
