@@ -56,16 +56,34 @@ pub trait Has<Component> {
     fn access(&self) -> &Component;
 }
 
-/// Borrows read-only access to some part of the container.
-///
-/// This function simply delegates to the trait's method, but
-/// it might be interesting for those who prefer turbofish
-/// to annotate types.
+/// Accesses a component from its container via a turbofish-friendly syntax.
 pub fn access_from<Component, Container>(container: &Container) -> &Component
 where
     Container: Has<Component>,
 {
     container.access()
+}
+
+/// Helper to give access to a component via turbofish-friendly, infix syntax.
+#[derive(Debug)]
+pub struct Accessor<Component>(std::marker::PhantomData<Component>);
+
+impl<Component> Accessor<Component> {
+    /// Accesses a component from its container.
+    ///
+    /// This function simply delegates to the trait's method, but it might be
+    /// interesting for those who prefer turbofish to annotate types combined with infix notation.
+    pub fn from<'c, Container>(&self, container: &'c Container) -> &'c Component
+    where
+        Container: Has<Component>,
+    {
+        container.access()
+    }
+}
+
+/// Constructs a proxy from which one may access a component from its container via turbofish-friendly, infix syntax.
+pub fn access<Component>() -> Accessor<Component> {
+    Accessor(std::marker::PhantomData)
 }
 
 /// Implements [`Has`] for a container which can give access to a component.
