@@ -1,7 +1,12 @@
 [package]
-name = "haz"
+authors = ["Rafael Varago <varago.rafael@gmail.com>"]
+categories = ["rust-patterns"]
 description = "A thin abstraction over polymorphic environments"
-version = "0.1.0"
+documentation = "https://docs.rs/haz"
 edition = "2018"
-
-[dependencies]
+keywords = ["haz", "config"]
+license = "MIT"
+name = "haz"
+readme = "README.md"
+repository = "https://github.com/rvarago/haz-rs"
+version = "0.1.0"
