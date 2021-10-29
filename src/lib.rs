@@ -64,7 +64,7 @@ where
     container.access()
 }
 
-/// Helper to give access to a component via turbofish-friendly, infix syntax.
+/// Helper to give access to a component via a turbofish-friendly, infix syntax.
 #[derive(Debug)]
 pub struct Accessor<Component>(std::marker::PhantomData<Component>);
 
@@ -72,7 +72,7 @@ impl<Component> Accessor<Component> {
     /// Accesses a component from its container.
     ///
     /// This function simply delegates to the trait's method, but it might be
-    /// interesting for those who prefer turbofish to annotate types combined with infix notation.
+    /// interesting for those who prefer turbofish to annotate types combined with an infix notation.
     pub fn from<'c, Container>(&self, container: &'c Container) -> &'c Component
     where
         Container: Has<Component>,
@@ -81,7 +81,7 @@ impl<Component> Accessor<Component> {
     }
 }
 
-/// Constructs a proxy from which one may access a component from its container via turbofish-friendly, infix syntax.
+/// Constructs a proxy from which one may access a component from its container via a turbofish-friendly, infix syntax.
 pub fn access<Component>() -> Accessor<Component> {
     Accessor(std::marker::PhantomData)
 }
