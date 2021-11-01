@@ -2,6 +2,11 @@
 
 > A thin abstraction over polymorphic environments.
 
+[<img alt="github" src="https://img.shields.io/badge/github-rvarago/haz-rs?style=for-the-badge&logo=github" height="20">](https://github.com/rvarago/haz-rs)
+[<img alt="crates.io" src="https://img.shields.io/crates/v/haz.svg?style=for-the-badge&logo=rust" height="20">](https://crates.io/crates/haz)
+[<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-haz?style=for-the-badge" height="20">](https://docs.rs/haz)
+[<img alt="build status" src="https://img.shields.io/github/workflow/status/rvarago/haz-rs/CI/main?style=for-the-badge" height="20">](https://github.com/rvarago/haz-rs/actions?query=branch%3Amain)
+
 ## Motivation
 
 Consider a scenario where we want to pass some data to a couple of functions.
